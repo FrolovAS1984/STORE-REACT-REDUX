@@ -1,10 +1,12 @@
+import Poster from "../Poster/Poster.jsx";
 
 
 function Home() {
     return (
-        <div>
-            HOME
-        </div>
+        <>
+
+            <Poster/>
+        </>
     )
 }
 

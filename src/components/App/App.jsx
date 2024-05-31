@@ -4,8 +4,19 @@ import AppRoutes from "../Routes/Routes.jsx";
 import Header from "../Header/Header.jsx";
 import Footer from "../Footer/Footer.jsx";
 import Sidebar from "../Sidebar/Sidebar.jsx";
+import {useDispatch} from "react-redux";
+import {useEffect} from "react";
+import {getCategories} from "../../features/categories/categoriesSlice.js";
 
 function App() {
+
+    const dispatch = useDispatch();
+
+    useEffect(()=>{
+
+        dispatch(getCategories())
+    },[dispatch])
+
 
 
   return (
