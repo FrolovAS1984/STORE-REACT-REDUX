@@ -7,6 +7,7 @@ import Sidebar from "../Sidebar/Sidebar.jsx";
 import {useDispatch} from "react-redux";
 import {useEffect} from "react";
 import {getCategories} from "../../features/categories/categoriesSlice.js";
+import {getProducts} from "../../features/prodacts/prodactsSlice.js";
 
 function App() {
 
@@ -14,7 +15,8 @@ function App() {
 
     useEffect(()=>{
 
-        dispatch(getCategories())
+        dispatch(getCategories());
+        dispatch(getProducts());
     },[dispatch])
 
 
